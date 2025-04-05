@@ -11,4 +11,9 @@ echo \
 sudo apt-get update
 _________________________________________________________________________________________________________
 
+
+```
+bash <(curl -s https://raw.githubusercontent.com/opiran-club/pf-tun/main/pf-tun.sh --ipv4)
+```
+
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
