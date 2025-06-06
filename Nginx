@@ -1,2 +1,44 @@
 /usr/share/nginx/html;
 docker run -d -v /home/fh/Downloads/healet-html:/usr/share/nginx/html -p 80:80 --name web1 docker.resaa.net/nginx:alpine-slim
+###################################################################
+
+server {
+    listen       80;
+    listen  [::]:80;
+    server_name aliferi.test;
+
+
+
+    location / {
+    proxy_pass http://172.17.0.2;
+
+    }
+
+
+    error_page   500 502 503 504  /50x.html;
+    location = /50x.html {
+        root   /usr/share/nginx/html;
+    }
+
+}
+
+server {
+    listen       80;
+    listen  [::]:80;
+    server_name aliali.test;
+
+
+
+    location / {
+    proxy_pass http://172.17.0.3;
+
+    }
+
+
+    error_page   500 502 503 504  /50x.html;
+    location = /50x.html {
+        root   /usr/share/nginx/html;
+    }
+
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
