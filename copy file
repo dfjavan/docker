@@ -1,0 +1,3 @@
+copy of container ih host
+
+podman cp dns:/etc/bind /opt/dns/bind/
