@@ -1,0 +1,10 @@
+#in vim  name file Dockerfile
+FROM nginx:alpine-slim  "name image and version"
+RUN mkdir aliresaa  "edit in image docker"
+CMD ["nginx","-g","daemon off;"]
+___________________________________
+run file
+
+docker build -t nameimage:TAG .
+sample
+docker build -t alireza:1.0 .
