@@ -8,3 +8,8 @@ run file
 docker build -t nameimage:TAG .
 sample
 docker build -t alireza:1.0 .
+___________________________________________________
+#docker pull in docker hub
+docker login
+docker build -t dfjavan/testbuild:1.0 .
+docker push  dfjavan/testbuild:1.0
